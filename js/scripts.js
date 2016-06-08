@@ -6,7 +6,12 @@ $(document).ready(function(event) {
     // alert(translateArray);
     if ((translateArray[0] === 'a') || (translateArray[0] === 'e') || (translateArray[0] === 'i') || (translateArray[0] === 'o') || (translateArray[0] === 'u')) {
       translateArray.push("ay");
-      var translatedString = translateArray.join("");
-    alert(translatedString);}
+  } else {
+    translateArray.push(translateArray[0],"ay");
+    translateArray.shift();
+  }
+
+  var translatedString = translateArray.join("");
+  alert(translatedString);
   });
 });
