@@ -1,0 +1,23 @@
+The program should add "ay" to words that begin with a vowel
+  example input: acid
+  example output: aciday
+
+the program should take the first letter of a word that begins with a single consonant and move it to the end of the word, with "ay" added.
+  example input: duck
+  example output: uckday
+
+For words that begin with a string of consonants, the program should take ALL of the initial consonants and move them to the end of the word with "ay" added.
+  example input: swim
+  example output imsway
+
+If a word begins with "qu," the program should move the "q" and "u" to the end of the word, and ad "ay"
+  example input: queen
+  example output: eenquay
+
+For words that begin with a consonant followed by "qu," the program should move the first consonants AND "qu" to the end of the word, and add "ay"
+  example input: squire
+  example output: iresquay
+
+The program should apply all of the previous logic to each word in a sentence.
+  example input: The quick brown fox.
+  example output: Ethay ickquay ownbray oxfay.
