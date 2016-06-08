@@ -13,15 +13,34 @@ function findVowel(inputArray) {
       vowelPosition.push(vowelFound);
     }
   };
-  // for (index2 = 0; index2 < vowelPosition.length; index2 ++){
-  //   vowelPosition.slice('-1');
-  // };
   vowelPosition.sort();
   return vowelPosition[0];
   };
+function numberSearch(nums) {
+  var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  numberPosition = [];
+  for (index4 = 0; index4 < numbers.length; index4 ++) {
+    var numberFound = nums.indexOf(numbers[index4]);
+    numberPosition.push(numberFound);
+  };
 
+  var sum = 0;
+  for (index5 = 0; index5 < numberPosition.length; index5 ++) {
+    sum = sum + numberPosition[index5];
+  };
+  if (sum > -10) {
+    var hasNumber = true;
+  }
+  else {
+    hasNumber = false;
+  }
+  return hasNumber;
+};
 function toPigLatin(phrase) {
 	var translateArray = phrase.split("");
+  var hasNumber = numberSearch(translateArray);
+  if (hasNumber === false) {
+
 	var indexFound = findVowel(translateArray);
 	if (translateArray[0]==='q' && translateArray[1]==='u'){
 		translateArray.push(translateArray[0],translateArray[1],"ay");
@@ -46,7 +65,7 @@ function toPigLatin(phrase) {
 		translateArray.push(translateArray[0],"ay");
 		translateArray.shift();
 	}
-
+}
 	var translatedString = translateArray.join("");
 	return translatedString;
 };
@@ -64,7 +83,7 @@ function eachWord(entireFunction){
 $(document).ready(function(event) {
   $('#pigLatin').submit(function(event) {
 
-	var toTranslate = $('input#originalText').val();
+	var toTranslate = ($('input#originalText').val()).toLowerCase();
 	eachWord(splitSentence(toTranslate));
 
   });

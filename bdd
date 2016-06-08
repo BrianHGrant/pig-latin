@@ -21,3 +21,11 @@ For words that begin with a consonant followed by "qu," the program should move 
 The program should apply all of the previous logic to each word in a sentence.
   example input: The quick brown fox.
   example output: Ethay ickquay ownbray oxfay.
+
+THe program should convert all letters to lower case
+  example input: Hi There Bob
+  example output: ihay erethay obbay
+
+The program should not attempt to translate words with numerical values
+  example input: h1 there b0b
+  example output: h1 erethay b0b
