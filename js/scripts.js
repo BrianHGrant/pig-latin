@@ -15,7 +15,7 @@ function findVowel(inputArray) {
   };
 
 function toPigLatin(phrase) {
-	var translateArray = toTranslate.split("");
+	var translateArray = phrase.split("");
 	var indexFound = findVowel(translateArray);
 	if (translateArray[0]==='q' && translateArray[1]==='u'){
 		translateArray.push(translateArray[0],translateArray[1],"ay");
