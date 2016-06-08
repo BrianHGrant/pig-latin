@@ -71,20 +71,21 @@ function toPigLatin(phrase) {
 };
 
 function eachWord(entireFunction){
-	alert(entireFunction);
 	entireArray = [];
 	for(index3 = 0; index3 < entireFunction.length; index3 ++) {
 		var wordPigLatin = toPigLatin(entireFunction[index3]);
 		entireArray.push(wordPigLatin);
 	}
 	var finalResult = entireArray.join(" ");
-	alert(finalResult);
+	return finalResult;
 }
 $(document).ready(function(event) {
   $('#pigLatin').submit(function(event) {
 
 	var toTranslate = ($('input#originalText').val()).toLowerCase();
-	eachWord(splitSentence(toTranslate));
-
+	var pigLatinPhrase = eachWord(splitSentence(toTranslate));
+	$('#result').fadeToggle();
+  $('#translated').text(pigLatinPhrase);
+  event.preventDefault();
   });
 });
