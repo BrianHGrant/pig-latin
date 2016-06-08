@@ -24,7 +24,11 @@ $(document).ready(function(event) {
     // var vowelArray = ['a', 'e', 'i', 'o', 'u'];
     var indexFound = findVowel(translateArray);
     alert(indexFound + "out of function");
-    if ((translateArray[0] === 'a') || (translateArray[0] === 'e') || (translateArray[0] === 'i') || (translateArray[0] === 'o') || (translateArray[0] === 'u')) {
+    if (translateArray[0]==='q' && translateArray[1]==='u'){
+      translateArray.push(translateArray[0],translateArray[1],"ay");
+      translateArray= translateArray.slice(2,translateArray.length);
+    }
+      else if ((translateArray[0] === 'a') || (translateArray[0] === 'e') || (translateArray[0] === 'i') || (translateArray[0] === 'o') || (translateArray[0] === 'u')) {
       translateArray.push("ay");
     } else if (indexFound > 1) {
       for(index=0; index < indexFound; index ++) {
