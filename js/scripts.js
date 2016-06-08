@@ -55,7 +55,6 @@ function toPigLatin(phrase) {
 			translateArray.push(translateArray[index]);
 
 		}
-		alert(index);
 		translateArray = translateArray.slice(indexFound, translateArray.length);
 		translateArray.push("ay");
 	}
