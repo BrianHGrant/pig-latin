@@ -5,6 +5,8 @@ $(document).ready(function(event) {
     var translateArray = toTranslate.split("");
     // alert(translateArray);
     if ((translateArray[0] === 'a') || (translateArray[0] === 'e') || (translateArray[0] === 'i') || (translateArray[0] === 'o') || (translateArray[0] === 'u')) {
-    alert('vowel');}
+      translateArray.push("ay");
+      var translatedString = translateArray.join("");
+    alert(translatedString);}
   });
 });
